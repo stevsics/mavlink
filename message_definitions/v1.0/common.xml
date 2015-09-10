@@ -2375,6 +2375,13 @@
                <field type="uint8_t" name="control_target" enum="MAV_CONTROL_TARGET"> Choose reference type from MAV_CONTROL_TARGET enum</field>
                <field type="uint8_t" name="coordinate_frame" enum="MAV_FRAME">Valid options are: MAV_FRAME_LOCAL_NED = 1, MAV_FRAME_LOCAL_OFFSET_NED = 7, MAV_FRAME_BODY_NED = 8, MAV_FRAME_BODY_OFFSET_NED = 9</field>
           </message>
+          <message id="94" name="SET_GIMBAL_REFERENCE_LOCAL_NED">
+               <description>Set pitch, roll and yaw reference for gimbal. Also, sets Gimbal mode.</description>
+               <field type="float" name="roll">Roll reference in local NED frame</field>
+               <field type="float" name="pitch">Pitch reference in local NED frame</field>
+               <field type="float" name="yaw">Yaw reference in local NED frame</field>
+               <field type="uint8_t" name="gimbal_mode">Mode in which gimbal is working</field>
+          </message>
           <message id="100" name="OPTICAL_FLOW">
                <description>Optical flow from a flow sensor (e.g. optical mouse sensor)</description>
                <field type="uint64_t" name="time_usec">Timestamp (UNIX)</field>
